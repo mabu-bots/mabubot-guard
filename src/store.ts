@@ -148,10 +148,10 @@ export class MabusabaStore {
     try {
       const backupPath = backupDatabase(this.db, dbPath);
       if (backupPath) {
-        console.log(`[mabubot-guard] database backup: ${backupPath}`);
+        console.log(`[mabusaba] database backup: ${backupPath}`);
       }
     } catch (error) {
-      console.warn("[mabubot-guard] database backup failed:", error);
+      console.warn("[mabusaba] database backup failed:", error);
     }
   }
 

@@ -61,7 +61,7 @@ export function backupDatabase(
     checkpointed = true;
   } catch (error) {
     console.warn(
-      "[mabubot-guard] WAL checkpoint before backup failed; copying sidecars too:",
+      "[mabusaba] WAL checkpoint before backup failed; copying sidecars too:",
       error,
     );
   }

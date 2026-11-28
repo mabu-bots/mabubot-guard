@@ -98,7 +98,7 @@ export function registerEvents(
       // 📌 1件の不正なメッセージ（取得失敗・削除済みチャンネル等）で
       // 未処理の rejection になってプロセスが落ちないよう、記録して
       // 次のメッセージの監視を続ける
-      console.error("[mabubot-guard] messageCreate failed:", error);
+      console.error("[mabusaba] messageCreate failed:", error);
     }
   });
 }
@@ -165,7 +165,7 @@ async function handleMessageCreate(
           .then(() => null)
           .catch((error: unknown) => error);
         if (timeoutError) {
-          console.error("[mabubot-guard] auto timeout failed:", timeoutError);
+          console.error("[mabusaba] auto timeout failed:", timeoutError);
         }
         const openEvent = store.getOpenRaidEvent(guildId);
         if (openEvent) {

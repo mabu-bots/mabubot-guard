@@ -155,13 +155,13 @@ registerEvents(client, store, raid);
 // 最近の Node ではプロセス終了にもつながる。記録すれば Bot は生き続け、
 // 診断の手がかりも残る。
 client.on("error", (error) => {
-  console.error("[mabubot-guard] client error:", error);
+  console.error("[mabusaba] client error:", error);
 });
 client.on("shardError", (error) => {
-  console.error("[mabubot-guard] shard error:", error);
+  console.error("[mabusaba] shard error:", error);
 });
 process.on("unhandledRejection", (reason) => {
-  console.error("[mabubot-guard] unhandled rejection:", reason);
+  console.error("[mabusaba] unhandled rejection:", reason);
 });
 
 process.on("SIGINT", () => {

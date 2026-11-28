@@ -335,7 +335,7 @@ export async function handleModCommand(
     try {
       await member.timeout(ms, reason);
     } catch (error) {
-      console.error("[mabubot-guard] timeout failed:", error);
+      console.error("[mabusaba] timeout failed:", error);
       await replyEmbed(
         interaction,
         "⚠️ タイムアウトできませんでした",
@@ -391,7 +391,7 @@ export async function handleModCommand(
     try {
       await member.timeout(null);
     } catch (error) {
-      console.error("[mabubot-guard] untimeout failed:", error);
+      console.error("[mabusaba] untimeout failed:", error);
       await replyEmbed(
         interaction,
         "⚠️ タイムアウト解除できませんでした",
@@ -446,7 +446,7 @@ export async function handleModCommand(
     try {
       await member.kick(reason);
     } catch (error) {
-      console.error("[mabubot-guard] kick failed:", error);
+      console.error("[mabusaba] kick failed:", error);
       await replyEmbed(
         interaction,
         "⚠️ キックできませんでした",
@@ -499,7 +499,7 @@ export async function handleModCommand(
         reason,
       });
     } catch (error) {
-      console.error("[mabubot-guard] ban failed:", error);
+      console.error("[mabusaba] ban failed:", error);
       await replyEmbed(
         interaction,
         "⚠️ BANできませんでした",
@@ -539,7 +539,7 @@ export async function handleModCommand(
     try {
       await interaction.guild.members.unban(userId);
     } catch (error) {
-      console.error("[mabubot-guard] unban failed:", error);
+      console.error("[mabusaba] unban failed:", error);
       await replyEmbed(
         interaction,
         "⚠️ BAN解除できませんでした",
@@ -602,7 +602,7 @@ export async function handleModCommand(
         `<#${channel.id}> で ${deleted.size}件を削除（実行者：<@${interaction.user.id}>）`,
       );
     } catch (error) {
-      console.error("[mabubot-guard] clear failed:", error);
+      console.error("[mabusaba] clear failed:", error);
       await replyEmbed(
         interaction,
         "⚠️ 削除できませんでした",
